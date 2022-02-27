@@ -43,12 +43,4 @@ function movePrev() {
         updateSlidePosition()
     }
 
-function clickToChangebutton() {
-    document.addEventListener('click', (event) => {
-        const box = document.querySelector('#carousel_button--prev');
-        const classes = box.classList;
-        console.log(classes.value);
-        const newClass = (classes.value === "#photo-grid-container #carousel_actions button") ? "afterClick" : "button";
-        box.classList = newClass;
-    });
-}
+
