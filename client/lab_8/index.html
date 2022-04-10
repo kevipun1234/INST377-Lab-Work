@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Lab 8 - JSON to Map Markers
+        </title>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+        <link rel="stylesheet" href="styles.css"/>
+    </head>
+<body>
+    <header class = "form-header">
+        <h1>Kevin Hung's Lab 8</h1>
+    </header>
+<div class="columns">
+    <div class="column">
+    <form action="/api/foodServicesPG" method="get" class="main_form">
+
+    <div class="form-row">
+        <label for="resto_name" class="label">Restaurant Name</label>
+        <div class="control">
+        <input type="text" name="resto_name" id="resto_name" />
+    </div>
+    </div>
+    <div class="form-row">
+        <label for="zipcode">Zipcode</label>
+        <div class="control">
+        <input id="zipcode" name="zipcode" type="text"/>
+    </div>
+    </div>
+
+    <fieldset class="legacy-form-row">
+        <legend>Veggie or Vegan?</legend>
+        <input id="food-type-1"
+                name="food-type"
+                type="radio"
+                value="yes"/>
+        <label for="food-type-1" class="radio-label">Yes</label>
+        <input id="food-type-2"
+                name="food-type"
+                type="radio"
+                value="no"/>
+        <label for="food-type-2" class="radio-label">No</label>
+    </fieldset>
+
+  
+    <div class="form-row">
+      
+        <button class="button submit_button" type="submit">Change Restaurant</button>
+    </div>
+
+</div>
+
+</form>
+<div class="column">
+<div class="form-2">
+    <div id="map"></div>
+    <h2>Restaurant list</h2>
+    <ul class="resto-list"></ul>
+</div>
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+
+
+</html>
