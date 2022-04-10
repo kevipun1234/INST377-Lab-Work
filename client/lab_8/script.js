@@ -67,7 +67,7 @@ async function mainEvent() { // the async keyword means we can make API requests
   const map = initMap('map');
   button.style.display = 'none'
 
-  if(localStorage.getItem('restaurants') === undefined) {
+  if(localStorage.getItem('restaurants') !== undefined) {
     const results = await fetch('/api/foodServicesPG'); // This accesses some data from our API
     const arrayFromJson = await results.json(); // This changes it into data we can use - an object
     localStorage.setItem('restaurants', JSON.stringify(arrayFromJson.data));
